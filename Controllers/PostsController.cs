@@ -1,9 +1,9 @@
-using System.Collections.Generic;
-using Microsoft.AspNetCore.Mvc;
-using API.Models;
-using API.Models.Interfaces;
-using Microsoft.AspNetCore.Cors;
 using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
 
 namespace API.Controllers
 {
@@ -12,48 +12,35 @@ namespace API.Controllers
     public class PostsController : ControllerBase
     {
         // GET: api/Posts
-        [EnableCors("AnotherPolicy")]
         [HttpGet]
-        public List<Post> Get()
+        public IEnumerable<string> Get()
         {
-            IGetAllPosts readObject = new ReadPostData();
-            return readObject.GetAllPosts();
+            return new string[] { "value1", "value2" };
         }
 
         // GET: api/Posts/5
-        [EnableCors("AnotherPolicy")]
         [HttpGet("{id}", Name = "Get")]
-        public Post Get(int id)
+        public string Get(int id)
         {
-            IGetPosts readObject = new ReadPostData();
-            return readObject.GetPost(id);
+            return "value";
         }
 
         // POST: api/Posts
-        [EnableCors("AnotherPolicy")]
         [HttpPost]
-        public void Post([FromBody] Post value)
+        public void Post([FromBody] string value)
         {
-            IInsertPost insertObject = new SavePost();
-            insertObject.InsertPost(value);
         }
 
         // PUT: api/Posts/5
-        [EnableCors("AnotherPolicy")]
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody] Post value)
+        public void Put(int id, [FromBody] string value)
         {
-            IEditPost insertObject = new EditPost();
-            insertObject.EditPosts(id, value.Text);
         }
 
-        // DELETE: api/ApiWithActions/5
-        [EnableCors("AnotherPolicy")]
+        // DELETE: api/Posts/5
         [HttpDelete("{id}")]
         public void Delete(int id)
         {
-            IDeletePost insertObject = new DeletePost();
-            insertObject.DeletePost(id);
         }
     }
 }

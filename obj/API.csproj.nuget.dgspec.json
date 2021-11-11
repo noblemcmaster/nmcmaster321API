@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\source\\repos\\MIS 321 21\\PA4\\mis331-pa3-noblemcmaster\\API\\API.csproj": {}
+    "C:\\source\\repos\\MIS 321 21\\PA4\\API\\API.csproj": {}
   },
   "projects": {
-    "C:\\source\\repos\\MIS 321 21\\PA4\\mis331-pa3-noblemcmaster\\API\\API.csproj": {
+    "C:\\source\\repos\\MIS 321 21\\PA4\\API\\API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\source\\repos\\MIS 321 21\\PA4\\mis331-pa3-noblemcmaster\\API\\API.csproj",
+        "projectUniqueName": "C:\\source\\repos\\MIS 321 21\\PA4\\API\\API.csproj",
         "projectName": "API",
-        "projectPath": "C:\\source\\repos\\MIS 321 21\\PA4\\mis331-pa3-noblemcmaster\\API\\API.csproj",
+        "projectPath": "C:\\source\\repos\\MIS 321 21\\PA4\\API\\API.csproj",
         "packagesPath": "C:\\Users\\noble\\.nuget\\packages\\",
-        "outputPath": "C:\\source\\repos\\MIS 321 21\\PA4\\mis331-pa3-noblemcmaster\\API\\obj\\",
+        "outputPath": "C:\\source\\repos\\MIS 321 21\\PA4\\API\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\noble\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -37,6 +37,12 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[5.0.2, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
