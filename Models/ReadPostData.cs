@@ -1,6 +1,8 @@
 using System.Collections.Generic;
 using API.Models.Interfaces;
 using MySql.Data.MySqlClient;
+using System.Data;
+using MySql.Data;
 
 namespace API.Models
 {

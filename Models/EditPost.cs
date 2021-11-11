@@ -1,4 +1,6 @@
 using MySql.Data.MySqlClient;
+using System.Data;
+using MySql.Data;
 using API.Models.Interfaces;
 
 namespace API.Models
